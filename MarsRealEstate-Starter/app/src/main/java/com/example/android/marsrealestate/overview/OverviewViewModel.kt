@@ -55,7 +55,7 @@ class OverviewViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 val listResult = MarsApi.retrofitService.getProperties()
-                _response.value = "Succes: ${listResult.size} Mars properties retrieved"
+                _response.value = "Succes: ${listResult.size} Mars properties retrieved."
             } catch (e: Exception) {
                 _response.value = "Failed: ${e.message}"
             }
